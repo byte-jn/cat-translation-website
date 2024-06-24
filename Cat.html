@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meine fünfte Internetseite</title>
+    <link rel="stylesheet" href="Cat.css">
+</head>
+<body>
+
+    <div>
+        <h3 id="h1">Cat</h3>
+    </div>
+    <div>
+        <p id="p">is another word for Cat</p>
+    </div>
+    <script>
+        const delays = [0, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000];
+
+        const languageWords = [
+        { word: "Chatte", delay: 10000 },
+        { word: "猫", delay: 20000 },
+        { word: "猫", delay: 30000 },
+        { word: "Kedi", delay: 40000 },
+        { word: "Gata", delay: 50000 },
+        { word: "кот", delay: 60000 },
+        { word: "قطة", delay: 70000 },
+        { word: "Kissa", delay: 80000 },
+        { word: "고양이", delay: 90000 },
+        { word: "Katze", delay: 100000 }
+        ];
+
+        languageWords.forEach(({ word, delay }) => {
+            setTimeout(() => {
+                const element = document.getElementById("h1");
+                element.innerHTML = word;
+            }, delay);
+        });
+
+        // Reload the page after 11 seconds
+        setTimeout(() => {
+            location.reload();
+        }, 110000);
+    </script>
+
+    </body>
+</html>
